@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{231F6CF8-AA21-4E4D-9A6A-7810C21B5E2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterfaceDevelopmentAssignment010</RootNamespace>
+    <AssemblyName>UserInterfaceDevelopmentAssignment010</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Menu\CheckoutMethod.xaml.cs">
+      <DependentUpon>CheckoutMethod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DebitCreditCardPayment.xaml.cs">
+      <DependentUpon>DebitCreditCardPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ComingSoonFilmDetails.xaml.cs">
+      <DependentUpon>ComingSoonFilmDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FilmDetails.xaml.cs">
+      <DependentUpon>FilmDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Paypal.xaml.cs">
+      <DependentUpon>Paypal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Seats.xaml.cs">
+      <DependentUpon>Seats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Success.xaml.cs">
+      <DependentUpon>Success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Tickets.xaml.cs">
+      <DependentUpon>Tickets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Switcher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISwitchable.cs" />
+    <Compile Include="PageSwitcher.xaml.cs">
+      <DependentUpon>PageSwitcher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Menu\CheckoutMethod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\DebitCreditCardPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\ComingSoonFilmDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Menu\FilmDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Paypal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Seats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\Tickets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageSwitcher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1480106940_right_circle.png" />
+    <Resource Include="Images\userRating_5_stars.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\ageRatings\ageRating12.png" />
+    <Resource Include="Images\favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\filmPosters\Arrival.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\filmPosters\Bad_Santa_2.jpg" />
+    <Resource Include="Images\filmPosters\Doctor_Strange.jpg" />
+    <Resource Include="Images\filmPosters\Fantastic_Beasts.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coming_soon\beauty_and_the_beast.jpg" />
+    <Resource Include="Images\coming_soon\king_arthur_legend_of_the_sword.jpg" />
+    <Resource Include="Images\coming_soon\logan.jpg" />
+    <Resource Include="Images\coming_soon\patriots_day.jpg" />
+    <Resource Include="Images\coming_soon\power_rangers.jpg" />
+    <Resource Include="Images\coming_soon\smurfs_the_lost_village.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\Bad-Santa-2BANNER.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ui\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\doctor_strange_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\arrival_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\fantastic-beasts-and-where-to-find-them_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\allied_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\filmPosters\allied_poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\king_arthur_legend_of_the_sword.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\Beauty-and-the-Beast_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\power_rangers_2017_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\patriots-day_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\smurfs_the_lost_village_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banners\logan_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Couch-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\screenshots\arrival_screen_1.jpg" />
+    <Resource Include="Images\screenshots\arrival_screen_2.jpg" />
+    <Resource Include="Images\screenshots\arrival_screen_3.jpg" />
+    <Resource Include="Images\screenshots\arrival_screen_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\screenshots\bad_santa_2_screen_1.jpg" />
+    <Resource Include="Images\screenshots\bad_santa_2_screen_2.jpg" />
+    <Resource Include="Images\screenshots\bad_santa_2_screen_3.jpg" />
+    <Resource Include="Images\screenshots\bad_santa_2_screen_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\screenshots\Allied_2016_screen_1.jpg" />
+    <Resource Include="Images\screenshots\Allied_2016_screen_2.jpg" />
+    <Resource Include="Images\screenshots\Allied_2016_screen_3.jpg" />
+    <Resource Include="Images\screenshots\Allied_2016_screen_4.jpg" />
+    <Resource Include="Images\screenshots\doctor_strange_screen_1.jpg" />
+    <Resource Include="Images\screenshots\doctor_strange_screen_2.jpg" />
+    <Resource Include="Images\screenshots\doctor_strange_screen_3.jpg" />
+    <Resource Include="Images\screenshots\doctor_strange_screen_4.jpg" />
+    <Resource Include="Images\screenshots\fantastic_beasts_screen_1.jpg" />
+    <Resource Include="Images\screenshots\fantastic_beasts_screen_2.jpg" />
+    <Resource Include="Images\screenshots\fantastic_beasts_screen_3.jpg" />
+    <Resource Include="Images\screenshots\fantastic_beasts_screen_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ageRatings\ageRating15.png" />
+    <Resource Include="Images\ageRatings\ageRatingTBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ageRatings\ageRatingPG.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

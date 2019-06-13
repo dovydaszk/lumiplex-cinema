@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="UserInterfaceDevelopmentAssignment010.Menu.FilmDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserInterfaceDevelopmentAssignment010.Menu"
+             mc:Ignorable="d" 
+             d:DesignHeight="740" d:DesignWidth="700" Loaded="UserControl_Loaded">
+  <Grid x:Name="LayoutRoot" Background="#232323">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="80" />
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="80" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition  Height="70"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <Button x:Name="btnBack" Grid.Row="0" Grid.Column="0" Click="btnBack_Click" Margin="10,0" >
+      <Button.Template>
+        <ControlTemplate>
+          <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/ui/back.png" />
+        </ControlTemplate>
+      </Button.Template>
+    </Button> 
+    <Grid Grid.Row="0" Grid.Column="1" ColumnSpan="2">
+      <Label Content="Lumiplex Cinema" 
+           FontSize="24"
+           Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+    <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#2e2f32">
+      <StackPanel>
+        <Label Content="Film Details" Foreground="#FFFFFF" FontSize="34" Width="auto" Background="#004775" HorizontalAlignment="Left"  />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblFilmTitle" Content="" Foreground="White" FontSize="24"/>
+        <Image x:Name="imgAgeRating" Width="30" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="User Rating:" Foreground="White" FontSize="16" />
+        <Label x:Name="lblUserRating" Content="5.7 / 10" Foreground="#FFF" VerticalAlignment="Bottom" FontSize="16" />
+      </StackPanel>
+    </StackPanel>
+    <StackPanel Grid.Column="1"
+                Grid.Row="2"
+                Orientation="Vertical" Background="#2e2f32">
+      <Image x:Name="imgBanner" Source="/UserInterfaceDevelopmentAssignment010;component/Images/banners/arrival_banner.jpg" MaxWidth="500" />
+      <StackPanel Orientation="Horizontal">
+        <Image x:Name="imgFilmScreenshotOne" Source="/UserInterfaceDevelopmentAssignment010;component/Images/screenshots/bad_santa_2_screen_1.jpg" Width="80" MouseDown="imgFilmScreenshotOne_MouseDown" />
+        <Image x:Name="imgFilmScreenshotTwo" Source="/UserInterfaceDevelopmentAssignment010;component/Images/screenshots/bad_santa_2_screen_2.jpg" Width="80" Margin="1,0" MouseDown="imgFilmScreenshotTwo_MouseDown" />
+        <Image x:Name="imgFilmScreenshotThree" Source="/UserInterfaceDevelopmentAssignment010;component/Images/screenshots/bad_santa_2_screen_3.jpg" Width="80" Margin="0,0,1,0" MouseDown="imgFilmScreenshotThree_MouseDown" />
+        <Image x:Name="imgFilmScreenshotFour" Source="/UserInterfaceDevelopmentAssignment010;component/Images/screenshots/bad_santa_2_screen_4.jpg" Width="80" MouseDown="imgFilmScreenshotFour_MouseDown" />
+      </StackPanel>
+      <ScrollViewer VerticalScrollBarVisibility="Auto" MinHeight="100" MaxHeight="220">
+        <StackPanel>
+        
+          <TextBlock Text="Hello World" x:Name="txtBlockDescription" LineHeight="25" Foreground="#FFFFFF" TextWrapping="Wrap" FontSize="16" Margin="15,0,0,0" />
+        
+      </StackPanel>
+      </ScrollViewer>
+    </StackPanel>
+    <StackPanel Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Background="#2e2f32">
+      <Label Content="Showing at" Foreground="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+      <ComboBox x:Name="cboShowingAt" SelectedIndex="0" MaxWidth="180" FontSize="16" Margin="0,0,0,0" Width="147" SelectedValuePath="Content">
+        <ComboBoxItem Content="Peterborough"></ComboBoxItem>
+      </ComboBox>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayName" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDay" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <Label x:Name="lblCurrentDayEnding" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonth" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnOne" Content="04:35 PM" Margin="15,0,0,0" FontSize="16" Click="btnFirst_Click"/>
+        <Button x:Name="btnTwo" Content="07:20 PM" Margin="15,0,10,0" FontSize="16" Click="btnSecond_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameTwo" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDayTwo" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingTwo" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthTwo" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnThree" Content="10:15 PM" Margin="15,0,0,0" FontSize="16" Click="btnThree_Click"/>
+        <Button x:Name="btnFour" Content="00:30 AM" Margin="15,0,0,0" FontSize="16" Click="btnFour_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameThree" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDayThree" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingThree" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthThree" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnFive" Content="11:45 AM" Margin="15,0,0,0" FontSize="16" Click="btnFive_Click"/>
+        <Button x:Name="btnSix" Content="02:15 PM" Margin="15,0,0,0" FontSize="16" Click="btnSix_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameFour" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDayFour" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingFour" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthFour" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnSeven" Content="11:00 AM" Margin="15,0,0,0" FontSize="16" Click="btnSeven_Click"/>
+        <Button x:Name="btnEight" Content="01:15 PM" Margin="15,0,0,0" FontSize="16" Click="btnEight_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameFive" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDayFive" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingFive" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthFive" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnNine" Content="10:30 AM" Margin="15,0,0,0" FontSize="16" Click="btnNine_Click"/>
+        <Button x:Name="btnTen" Content="04:00 PM" Margin="15,0,0,0" FontSize="16" Click="btnTen_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameSix" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDaySix" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingSix" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthSix" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnEleven" Content="02:00 PM" Margin="15,0,0,0" FontSize="16" Click="btnEleven_Click"/>
+        <Button x:Name="btnTwelve" Content="07:00 PM" Margin="15,0,0,0" FontSize="16" Click="btnTwelve_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label x:Name="lblCurrentDayNameSeven" Content="Thu," Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="10,0,0,0" Padding="5,5,0,5" />
+        <Label x:Name="lblCurrentDaySeven" Content="01" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+        <Label x:Name="lblCurrentDayEndingSeven" Content="st" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="0" Padding="0,5,5,5" HorizontalAlignment="Left" />
+        <Label x:Name="lblCurrentMonthSeven" Content="Nov" Foreground="#FFFFFF" FontWeight="Bold" FontSize="16" Margin="5,0,0,0" Padding="0,5,5,5" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnThirteen" Content="02:00 PM" Margin="15,0,0,0" FontSize="16" Click="btnThirteen_Click"/>
+        <Button x:Name="btnFourteen" Content="04:45 PM" Margin="15,0,0,0" FontSize="16" Click="btnFourteen_Click" />
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

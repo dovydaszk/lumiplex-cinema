@@ -1,0 +1,235 @@
+﻿<UserControl x:Class="UserInterfaceDevelopmentAssignment010.Menu.Tickets"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserInterfaceDevelopmentAssignment010.Menu"
+             mc:Ignorable="d" 
+             d:DesignHeight="740" d:DesignWidth="700">
+  <Grid Background="#232323">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="80" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="80" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition  Height="50"/>
+      <RowDefinition  Height="*"/>
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Grid.Column="1">
+      <Label Content="Lumiplex Cinema" 
+           Grid.Column="1"
+           Grid.Row="0"
+           FontSize="24"
+           Foreground="#FFFFFF" HorizontalAlignment="Center"/>
+    </StackPanel>
+    <Grid Grid.Row="1" Grid.Column="1" Background="#2e2f32">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid Grid.Row="0">
+        <StackPanel>
+          <Label Content="Choose Your Tickets" Foreground="#FFF" FontSize="34" Background="#004775" Width="auto" HorizontalAlignment="Left"/>
+          <StackPanel x:Name="stackPanelIncorrectDetails" Visibility="Collapsed" >
+            <Label Foreground="White" FontWeight="Bold" FontSize="14" BorderBrush="#FFFF4848" HorizontalAlignment="Left" BorderThickness="5" >
+              <TextBlock TextWrapping="Wrap">
+              Currently you 0 tickets selected. Please select 1 or more tickets, to continue with your booking.
+              </TextBlock>
+            </Label>
+          </StackPanel>
+        </StackPanel>
+      </Grid>
+      <Grid Grid.Row="1" Margin="0,10,0,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0"  Background="#006599">
+          <TextBlock Text="Type" Foreground="#FFFFFF" FontSize="16" Margin="5,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Background="#006599">
+          <TextBlock Text="Price" Foreground="#FFFFFF" FontSize="16"  />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="2" Background="#006599">
+          <TextBlock Text="Quantity" Foreground="#FFFFFF" FontSize="16" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="3" Background="#006599">
+          <TextBlock Text="Subtotal" Foreground="#FFFFFF" FontSize="16" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Background="#E5E5E5">
+          <TextBlock Text="Adult" Foreground="#000000" FontSize="16" Margin="5,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0" Background="#C6D3E4">
+          <TextBlock Text="Child" Foreground="#000000" FontSize="16" Margin="5,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="0" Background="#E5E5E5">
+          <TextBlock Text="Senior" Foreground="#000000" FontSize="16" Margin="5,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="0" Background="#C6D3E4">
+          <TextBlock Text="Student" Foreground="#000000" FontSize="16" Margin="5,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+          <StackPanel Orientation="Horizontal" Background="#E5E5E5">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockAdultPrice" Text="15.00" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+          <StackPanel Orientation="Horizontal" Background="#C6D3E4">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockChildPrice" Text="8.00" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1">
+          <StackPanel Orientation="Horizontal" Background="#E5E5E5">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockSeniorPrice" Text="12.50" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1">
+          <StackPanel Orientation="Horizontal" Background="#C6D3E4">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockStudentPrice" Text="12.50" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Background="#E5E5E5">
+          <ComboBox x:Name="cboAdultQuantity" DropDownClosed="cboAdultQuantity_DropDownClosed" HorizontalAlignment="Left" Width="80" SelectedValuePath="Content" SelectedIndex="0">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+          </ComboBox>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2" Background="#C6D3E4">
+          <ComboBox x:Name="cboChildQuantity" HorizontalAlignment="Left" Width="80" SelectedValuePath="Content" DropDownClosed="cboChildQuantity_DropDownClosed" SelectedIndex="0">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+          </ComboBox>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="2" Background="#E5E5E5">
+          <ComboBox x:Name="cboSeniorQuantity" HorizontalAlignment="Left" Width="80" Height="22" VerticalAlignment="Top" SelectedValuePath="Content" DropDownClosed="cboSeniorQuantity_DropDownClosed" SelectedIndex="0">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+          </ComboBox>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="2" Background="#C6D3E4">
+          <ComboBox x:Name="cboStudentQuantity" HorizontalAlignment="Left" Width="80" SelectedValuePath="Content" DropDownClosed="cboStudentQuantity_DropDownClosed" SelectedIndex="0">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+          </ComboBox>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3">
+          <StackPanel Orientation="Horizontal" Background="#E5E5E5">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockAdultSubtotal" Text="0" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="3">
+          <StackPanel Orientation="Horizontal" Background="#C6D3E4">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockChildSubtotal" Text="0" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="3">
+          <StackPanel Orientation="Horizontal" Background="#E5E5E5">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockSeniorSubtotal" Text="0" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="3">
+          <StackPanel Orientation="Horizontal" Background="#C6D3E4">
+            <TextBlock Text="£" Foreground="#000000" FontSize="16" />
+            <TextBlock x:Name="txtBlockStudentSubtotal" Text="0" Foreground="#000000" FontSize="16" />
+          </StackPanel>
+        </Grid>
+      </Grid>
+      <Grid Grid.Row="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="5*"/>
+          <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid Grid.Row="0">
+            <StackPanel Orientation="Vertical" Margin="5,0,0,0">
+              <TextBlock Text="List of tickets" Foreground="#FFFFFF" FontSize="16" Margin="0,15,0,0" />
+              <StackPanel x:Name="stackPanelAdultTickets" Visibility="Collapsed">
+                <Label x:Name="lblNumberOfAdultTickets" Content="Adult" Foreground="#FFFFFF" />
+              </StackPanel>
+              <StackPanel x:Name="stackPanelChildrenTickets"  Visibility="Collapsed">
+                <Label x:Name="lblNumberOfChildTickets" Content="Child" Foreground="#FFFFFF" />
+              </StackPanel>
+              <StackPanel x:Name="stackPanelSeniorTickets" Visibility="Collapsed">
+                <Label x:Name="lblNumberOfSeniorsTickets" Content="List of tickets" Foreground="#FFFFFF" />
+              </StackPanel>
+              <StackPanel x:Name="stackPanelStudentTickets"  Visibility="Collapsed">
+                <Label x:Name="lblNumberOfStudentsTickets" Content="List of tickets" Foreground="#FFFFFF" />
+              </StackPanel>
+            </StackPanel>
+          </Grid>
+          <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+              <TextBlock Text="Total (Inc VAT): " Foreground="#FFFFFF" FontSize="16" Margin="5,0,0,15" />
+              <TextBlock Text="£ " Foreground="#FFFFFF" FontSize="16" />
+              <TextBlock x:Name="txtBlockSubototalOfAllTicekts" Text="0.00 " Foreground="#FFFFFF" FontSize="16" Margin="0,0,0,15" />
+            </StackPanel>
+          </Grid>
+          <Grid Grid.Row="3">
+            <StackPanel Orientation="Horizontal">
+              <Button x:Name="btnCancel" Content="Cancel" Click="btnCancel_Click" HorizontalAlignment="Right" Width="100" Height="40" Background="#0079C8" Foreground="White" FontSize="16" Margin="330,0,0,0" />
+              <Button x:Name="btnContinue" Content="Continue" Click="btnContinue_Click" HorizontalAlignment="Right" Width="100" Height="40" Background="#0079C8" Foreground="White" FontSize="16" Margin="5,0,0,0" />
+            </StackPanel>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

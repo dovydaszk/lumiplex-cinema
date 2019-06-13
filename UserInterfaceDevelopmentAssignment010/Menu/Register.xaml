@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="UserInterfaceDevelopmentAssignment010.Menu.Register"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserInterfaceDevelopmentAssignment010.Menu"
+             mc:Ignorable="d" 
+             d:DesignHeight="740" d:DesignWidth="700">
+  <Grid Background="#232323">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="80" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="80" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition  Height="50"/>
+      <RowDefinition  Height="*"/>
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <Button x:Name="btnBack" Grid.Row="0" Grid.Column="0" Click="btnBack_Click">
+      <Button.Template>
+        <ControlTemplate>
+          <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/ui/back.png"/>
+        </ControlTemplate>
+      </Button.Template>
+    </Button>
+    <StackPanel Grid.Row="0" Grid.Column="1">
+      <Label Content="Lumiplex Cinema" 
+           Grid.Column="1"
+           Grid.Row="0"
+           Foreground="#FFFFFF"
+           FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </StackPanel>
+    <StackPanel Grid.Row="0" Grid.Column="3"/>
+    <StackPanel Grid.Row="1" Grid.Column="1" Background="#2e2f32">
+      <Label Content="Register" Foreground="#FFF" FontSize="34" Width="Auto" HorizontalAlignment="Left" Background="#004775" />
+      <StackPanel x:Name="stackPanelIncorrectDetails" Visibility="Collapsed" >
+        <Label Foreground="White" FontWeight="Bold" FontSize="14" BorderBrush="#FFFF4848" HorizontalAlignment="Left" BorderThickness="5">
+          <TextBlock TextWrapping="Wrap">
+             Please fill in all the fields. If all the fields are complete, make sure that the password and the email are the same in the required fields.
+          </TextBlock>
+        </Label>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Title: " Foreground="White" Width="150" Margin="0,5,0,15" HorizontalContentAlignment="Right" FontSize="16"/>
+        <TextBox x:Name="txtBoxTitle" Width="120" Margin="0,3,0,15" FontSize="16" TextWrapping="Wrap" VerticalContentAlignment="Center" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="First Name: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16"/>
+        <TextBox x:Name="txtBoxFirstName" Width="265" Margin="0,0,0,15" FontSize="16" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Last Name: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <TextBox x:Name="txtBoxLastName" Width="265" Margin="0,0,0,15" FontSize="16" TextWrapping="Wrap" VerticalContentAlignment="Center" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Email: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <TextBox x:Name="txtBoxEmail" Width="265" FontSize="16" VerticalContentAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,15" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Confirm Email: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <TextBox x:Name="txtBoxConfirmEmail" Width="265" Margin="0,0,0,15" FontSize="16" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Password: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <PasswordBox x:Name="txtBoxPassword" Width="265" Margin="0,0,0,15" FontSize="16" VerticalContentAlignment="Center"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Confirm Password: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <PasswordBox x:Name="txtBoxConfirmPassword" Width="265" Margin="0,0,0,15" FontSize="16" VerticalContentAlignment="Center"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Post Code: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <TextBox x:Name="txtBoxPostCode" Width="170" Margin="0,0,0,15" FontSize="16" TextWrapping="Wrap" VerticalContentAlignment="Center" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Label Content="Local Cinema: " Foreground="White" Width="150" Margin="0,0,0,15" HorizontalContentAlignment="Right" FontSize="16" />
+        <ComboBox x:Name="cboxLocalCinema" Width="265" SelectedIndex="0" Margin="0,0,0,15" FontSize="16" SelectedValuePath="Content">
+          <ComboBoxItem Content="Peterborough" />
+        </ComboBox>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Width="100" Height="40" Margin="315,0,0,0" Background="#0079C8" Foreground="White" FontSize="16" Click="btnRegister_Click"/>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>

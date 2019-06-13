@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="UserInterfaceDevelopmentAssignment010.Menu.MainMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserInterfaceDevelopmentAssignment010.Menu"
+             mc:Ignorable="d" 
+             d:DesignHeight="730" Width="700">
+  <Grid x:Name="mainMenuLayoutRoot" Background="#232323" Margin="0,0,10,0">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="80" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="80" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition  Height="50"/>
+      <RowDefinition  Height="*"/>
+      <RowDefinition Height="20" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Grid.Column="1">
+      <Label Content="Lumiplex Cinema" 
+           Grid.Column="1"
+           Grid.Row="0"
+           FontSize="22"
+           Foreground="#FFFFFF" HorizontalAlignment="Center"/>
+    </StackPanel>
+    <StackPanel Grid.Column="1"
+                Grid.Row="1" Orientation="Vertical" Background="#2e2f32">
+      <Label Content="Currently Showing" 
+           Grid.Column="1"
+           Grid.Row="1"
+           FontSize="24"
+           Foreground="#FFFFFF"
+           Background="#004775"
+           MaxWidth="210" HorizontalAlignment="Left" BorderThickness="0,0,0,0"
+             />
+      <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                    VerticalScrollBarVisibility="Auto">
+        <StackPanel Orientation="Horizontal" Background="#2e2f32">
+          <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="txtblckTitle1" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Bad Santa 2" Padding="0,20,0,0" LineHeight="Auto"/>
+            <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/filmPosters/Bad_Santa_2.jpg" Margin="10,0" MaxWidth="100" Width="90" />
+            <Button x:Name="btnReadMore1" Content="Read More" Width="100" Click="btnReadMore1_Click" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" />
+            <Button x:Name="btnBookTicket1" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5" Click="btnReadMore1_Click"/>
+          </StackPanel>
+          <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="txtblckTitle2" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Arrival" Padding="0,20,0,0"/>
+            <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/filmPosters/Arrival.jpg" Margin="10,0" MaxWidth="100" Width="90" />
+            <Button x:Name="btn2" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btn2_Click"/>
+            <Button x:Name="btnBookTicket2" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btn2_Click"/>
+          </StackPanel>
+          <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="txtblckTitle3" Text="Doctor Strange" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" />
+            <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/filmPosters/Doctor_Strange.jpg" Margin="10,0" MaxWidth="100" Width="90" />
+            <Button x:Name="btnReadMoreDoctorStrange" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreDoctorStrange_Click" />
+            <Button x:Name="btnBookTicket3" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreDoctorStrange_Click" />
+          </StackPanel>
+          <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="txtblckTitle4" Text="Fantastic Beasts" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap"/>
+            <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/filmPosters/Fantastic_Beasts.jpg" Margin="10,0" MaxWidth="100" Width="90" />
+            <Button x:Name="btnReadMoreFantasticBeasts" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreFantasticBeasts_Click"/>
+            <Button x:Name="btnBookTicket4" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreFantasticBeasts_Click"/>
+          </StackPanel>
+          <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="txtblckTitle5" Text="Allied" Foreground="#FFFFFF" FontSize="16" Margin="10,0" Padding="0,20,0,0" MaxWidth="100" TextWrapping="Wrap"/>
+            <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/filmPosters/allied_poster.jpg" Margin="10,0" MaxWidth="100" Width="90" />
+            <Button x:Name="btnReadMoreAllied" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreAllied_Click" />
+            <Button x:Name="btnBookTicket5" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreAllied_Click" />
+          </StackPanel>
+        </StackPanel>
+      </ScrollViewer>
+      <StackPanel Orientation="Vertical">
+        <Label Content="Coming Soon" 
+           Grid.Column="1"
+           Grid.Row="1"
+           FontSize="22"
+           Foreground="#FFFFFF"
+           Background="#004775" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                    VerticalScrollBarVisibility="Auto">
+          <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon1" Text="King Arthur: Legend of the Sword" Foreground="#FFFFFF" FontSize="16" Margin="10,0" TextWrapping="Wrap" MaxWidth="100" />
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/king_arthur_legend_of_the_sword.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMoreKingArthur" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreKingArthur_Click" />
+              <Button x:Name="btnBookTicket6" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5" Click="btnReadMoreKingArthur_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon2" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Beauty and the Beast" Padding="0,21,0,0" />
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/beauty_and_the_beast.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMoreBeautyAndTheBeast" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreBeautyAndTheBeast_Click"/>
+              <Button x:Name="btnBookTicket7" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreBeautyAndTheBeast_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon3" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Power Rangers" Padding="0,21,0,0" />
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/power_rangers.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMorePowerRangers" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMorePowerRangers_Click"/>
+              <Button x:Name="btnBookTicket8" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMorePowerRangers_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon4" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Patriots Day" Padding="0,43,0,0" />
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/patriots_day.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMorePatriotsDay" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMorePatriotsDay_Click"/>
+              <Button x:Name="btnBookTicket9" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMorePatriotsDay_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon5" Foreground="#FFFFFF" FontSize="16" Margin="10,0" MaxWidth="100" TextWrapping="Wrap" Text="Smurfs: The Lost Village" Padding="0,21,0,0" />
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/smurfs_the_lost_village.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMoreSmurfsTheLostVillage" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreSmurfsTheLostVillage_Click"/>
+              <Button x:Name="btnBookTicket10" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreSmurfsTheLostVillage_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+              <TextBlock x:Name="txtBlockComingSoon6" Foreground="#FFFFFF" FontSize="16" Margin="10,0" Text="Logan" Padding="0,42,0,0"/>
+              <Image Source="/UserInterfaceDevelopmentAssignment010;component/Images/coming_soon/logan.jpg" Margin="10,0" Width="90" />
+              <Button x:Name="btnReadMoreLogan" Content="Read More" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreLogan_Click"/>
+              <Button x:Name="btnBookTicket11" Content="Book Ticket" Width="100" Background="#0079C8" Foreground="#FFFFFF" FontSize="16" Margin="0,5,0,0" Click="btnReadMoreLogan_Click"/>
+            </StackPanel>
+          </StackPanel>
+        </ScrollViewer>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</UserControl>
